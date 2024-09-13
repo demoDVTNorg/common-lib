@@ -27,6 +27,8 @@ jobs:
           HEAD_BRANCH: ${{ github.event.pull_request.head.ref }}
           BASE_BRANCH: ${{ github.event.pull_request.base.ref }}
           COMMIT_SHA: ${{ github.event.pull_request.head.sha }}
+          PR_Author: ${{ github.event.pull_request.user.login }}
+          PR_Author_ID: ${{ github.event.pull_request.user.id }}
         run: |
           echo "HEAD_BRANCH=$HEAD_BRANCH" >> $GITHUB_ENV
           echo "BASE_BRANCH=$BASE_BRANCH" >> $GITHUB_ENV
