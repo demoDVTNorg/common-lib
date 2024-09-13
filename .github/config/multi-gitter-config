@@ -3,10 +3,10 @@ assignees:
   - yashasvi17
 
 # Email of the committer. If not set, the global git config setting will be used.
-# author-email: prkhrkat@gmail.com
+author-email: yashasvi.pareta@devtron.ai
 
 # Name of the committer. If not set, the global git config setting will be used.
-# author-name: prakhar
+author-name: yashasvi17
 
 # The branch which the changes will be based on.
 base-branch: 
