@@ -3,7 +3,7 @@
 # Title: Updates a go module to a new (patch/minor) version
 
 ### Change these values ###
-MODULE=github.com/demoDVTNorg/common-lib
+MODULE=github.com/devtron-labs/common-lib
 VERSION=${COMMIT_SHA}
 
 echo "Commit SHA: ${VERSION}"
