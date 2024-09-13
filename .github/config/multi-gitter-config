@@ -116,6 +116,8 @@ repo:
   # - devtron-labs/git-sensor-enterprise
   # - devtron-labs/common-lib-private
   - demoDVTNorg/kubewatch
+  - demoDVTNorg/lens
+
 
 # Exclude repositories that match with a given Regular Expression
 repo-exclude:
