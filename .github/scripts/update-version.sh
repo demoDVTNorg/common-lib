@@ -3,13 +3,13 @@
 # Title: Updates a go module to a new (patch/minor) version
 
 ### Change these values ###
-MODULE=github.com/demoDVTNorg/common-lib
-VERSION=${COMMIT_SHA}
+MODULE=github.com/devtron-labs/common-lib
+VERSION=13309c097540ea83f906b2138e36bce3349100b4
 
 echo "Commit SHA: ${VERSION}"
         
 # Stop the script if any command fails
-set -ex
+set -e
 
 # Check if the module already exists, abort if it does not
 go list -m $MODULE &> /dev/null
