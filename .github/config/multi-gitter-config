@@ -115,7 +115,7 @@ repo:
   # - devtron-labs/common-lib-private
   - demoDVTNorg/kubewatch
   - demoDVTNorg/lens
-
+  - demoDVTNorg/image-scanner
 
 # Exclude repositories that match with a given Regular Expression
 repo-exclude:
@@ -128,7 +128,6 @@ repo-search:
 
 # The username of the reviewers to be added on the pull request.
 reviewers:
-  - yashasvi17
  
 # Skip repositories which are forks.
 skip-forks: false
