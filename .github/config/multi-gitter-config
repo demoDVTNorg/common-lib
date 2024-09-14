@@ -1,6 +1,6 @@
 # The username of the assignees to be added on the pull request.
 assignees:
-  - yashasvi17
+  - systemsdt
 
 # Email of the committer. If not set, the global git config setting will be used.
 author-email: 
