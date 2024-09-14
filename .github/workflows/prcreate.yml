@@ -1,4 +1,4 @@
-name: Update Dependencies with Multi-Gitter
+name: Creating PR using Multi-Gitter
 
 on:
   pull_request:
@@ -20,7 +20,7 @@ jobs:
           go-version: '1.21'
 
       - name: Install multi-gitter
-        run: go install github.com/lindell/multi-gitter@latest
+        run: curl -s https://raw.githubusercontent.com/lindell/multi-gitter/master/install.sh | sh
 
       - name: Get PR details
         env:
