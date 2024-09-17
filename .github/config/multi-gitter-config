@@ -119,6 +119,10 @@ repo:
   - devtron-labs/ci-runner
   - devtron-labs/git-sensor
   - chart-sync 
+  - devtron-labs/devtron-enterprise
+  - devtron-labs/image-scanner-enterprise
+  - devtron-labs/ci-runner-enterprise
+  - chart-sync-enterprise
 
 
 
