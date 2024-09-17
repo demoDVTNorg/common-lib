@@ -104,9 +104,9 @@ push-only: false
 
 # The name, including owner of a GitHub repository in the format "ownerName/repoName".
 repo:
-
-
-
+  - demoDVTNorg/kubewatch
+  - demoDVTNorg/lens
+  - demoDVTNorg/ci-runner
 
 # Exclude repositories that match with a given Regular Expression
 repo-exclude:
@@ -120,9 +120,7 @@ repo-search:
 # The username of the reviewers to be added on the pull request.
 reviewers:
 
- 
 
- 
 # Skip repositories which are forks.
 skip-forks: false
 
