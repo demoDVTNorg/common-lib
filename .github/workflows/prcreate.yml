@@ -39,7 +39,7 @@ jobs:
 
       - name: Update script with PR details
         run: |
-          sed -i 's/VERSION=.*/VERSION=${{ env.COMMIT_SHA }}/' .github/scripts/update-version.sh
+       
 
       - name: Run multi-gitter
         env:
