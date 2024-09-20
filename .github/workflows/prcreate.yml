@@ -37,9 +37,7 @@ jobs:
           echo "PR_AUTHOR_ID=$PR_AUTHOR_ID" >> $GITHUB_ENV
           echo "PR_AUTHOR_EMAIL=${PR_AUTHOR_ID}+${PR_AUTHOR}@users.noreply.github.com" >> $GITHUB_ENV
 
-      - name: Update script with PR details
-        run: |
-       
+   
 
       - name: Run multi-gitter
         env:
