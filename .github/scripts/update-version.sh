@@ -6,7 +6,7 @@
 MODULE=github.com/devtron-labs/common-lib
 VERSION=13309c097540ea83f906b2138e36bce3349100b4
 
-echo "Commit SHA: {$VERSION}"
+echo "Commit SHA: 13309c097540ea83f906b2138e36bce3349100b4"
         
 # Stop the script if any command fails
 set -e
