@@ -44,11 +44,21 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
            mkdir -p ~/.ssh
+           chmod 700 ~/.ssh
            echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
            chmod 600 ~/.ssh/id_rsa
            ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+           chmod 644 ~/.ssh/known_hosts
            echo "SSH key file permissions:"
            ls -l ~/.ssh/id_rsa
+           cat > ~/.ssh/config << EOF
+           Host github.com
+             User git
+             IdentityFile ~/.ssh/id_rsa
+             StrictHostKeyChecking yes
+           EOF
+           chmod 600 ~/.ssh/config
+           
            git config --global url."ssh://git@github.com/".insteadOf "https://github.com/"
            echo "git-config content:"
            cat ~/.gitconfig
@@ -56,7 +66,7 @@ jobs:
            ls -la ~/.ssh
            echo "Testing SSH connection to GitHub:"
            ssh -vvT git@github.com || true
-  
+              
       - name: Test repository access
         run: |
           echo "Attempting to clone a test repository:"
@@ -78,8 +88,8 @@ jobs:
           multi-gitter run .github/scripts/update-version.sh \
             --base-branch "$BASE_BRANCH" \
             --branch "$HEAD_BRANCH" \
-            --author-name "Pawan" \
-            --author-email "pawan@github.com" \
+            --author-name "$PR_AUTHOR" \
+            --author-email "$PR_AUTHOR_EMAIL" \
             --pr-title "fix: sync with changes from $HEAD_BRANCH of common-lib" \
             --config .github/config/multi-gitter-config 
          
