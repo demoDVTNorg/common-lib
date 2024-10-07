@@ -45,8 +45,6 @@ jobs:
         env:
           GITEA_TOKEN: ${{ secrets.GITEA_TOKEN }}
         run: |
-          
-          git config --global url.https://$GITEA_TOKEN@github.com/.insteadOf https://github.com/
           chmod +x .github/scripts/update-version.sh
           echo "Running multi-gitter with verbose SSH:"
           multi-gitter run .github/scripts/update-version.sh \
