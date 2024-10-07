@@ -3,10 +3,11 @@ name: Creating PR using Multi-Gitter (Debug Version)
 on:
   pull_request:
     types: [opened]
+    branches:
+      - develop
+      - main
+      
   workflow_dispatch:
-
-env:
-  ACTIONS_STEP_DEBUG: true
 
 jobs:
   update-dependencies:
