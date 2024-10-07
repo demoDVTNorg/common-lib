@@ -50,7 +50,7 @@ jobs:
           chmod +x .github/scripts/update-version.sh
           echo "Running multi-gitter with verbose SSH:"
           multi-gitter run .github/scripts/update-version.sh \
-            --token "$GITEA_TOKEN"
+            --token "$GITEA_TOKEN" \
             --base-branch "$BASE_BRANCH" \
             --branch "$HEAD_BRANCH" \
             --author-name "$PR_AUTHOR" \
