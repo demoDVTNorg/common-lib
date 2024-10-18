@@ -2,10 +2,12 @@ name: Creating PR using Multi-Gitter (Debug Version)
 
 on:
   pull_request:
-    types: [opened]
+    types: [opened, synchronize]
     branches:
       - develop
       - main
+    paths:
+      - 'common-lib/**'
       
   workflow_dispatch:
 
